@@ -1,0 +1,150 @@
+<div class="container" style="margin-top: 10px; margin-bottom: 30px;">
+    <div class="row justify-content-end">
+        <div class="col-3 align-self-center">
+            <div class="row">
+                <div class="col-2">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Homem |
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Casacos</a></li>
+                            <li><a class="dropdown-item" href="#">Camisas</a></li>
+                            <li><a class="dropdown-item" href="#">Calças</a></li>
+                            <li><a class="dropdown-item" href="#">Sweatshirts</a></li>
+                            <li><a class="dropdown-item" href="#">Polos</a></li>
+                            <li><a class="dropdown-item" href="#">Sapatos</a></li>
+                            <li><a class="dropdown-item" href="#" [routerLink]="['/produtos.html']">Todos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-10">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            &nbsp; &nbsp; Mulher
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#">Vestidos</a></li>
+                            <li><a class="dropdown-item" href="#">Blusões</a></li>
+                            <li><a class="dropdown-item" href="#">Coletes</a></li>
+                            <li><a class="dropdown-item" href="#">Jeans</a></li>
+                            <li><a class="dropdown-item" href="#">Saias</a></li>
+                            <li><a class="dropdown-item" href="#">Calções</a></li>
+                            <li><a class="dropdown-item" href="#">Lingerie</a></li>
+                            <li><a class="dropdown-item" href="#">Sapatos</a></li>
+                            <li><a class="dropdown-item" href="#">Malas</a></li>
+                            <li><a class="dropdown-item" href="#" [routerLink]="['/produtos.html']">Todos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <button mat-button [matMenuTriggerFor]="menuHomem"> Homem </button> |
+            <button mat-button [matMenuTriggerFor]="menuMulher"> Mulher </button>
+            <mat-menu #menuHomem="matMenu">
+                <button mat-menu-item>Casacos</button>
+                <button mat-menu-item>Camisas</button>
+                <button mat-menu-item>Calças</button>
+                <button mat-menu-item>Sweatshirts</button>
+                <button mat-menu-item>Polos</button>
+                <button mat-menu-item>Sapatos</button>
+                <button mat-menu-item [routerLink]="['/produtos.html']">Todos</button>
+            </mat-menu>
+            <mat-menu #menuMulher="matMenu">
+                <button mat-menu-item>Vestidos</button>
+                <button mat-menu-item>Blusões</button>
+                <button mat-menu-item>Coletes</button>
+                <button mat-menu-item>Jeans</button>
+                <button mat-menu-item>Saias</button>
+                <button mat-menu-item>Calções</button>
+                <button mat-menu-item>Lingerie</button>
+                <button mat-menu-item>Sapatos</button>
+                <button mat-menu-item>Malas</button>
+                <button mat-menu-item [routerLink]="['/produtos.html']">Todos</button>
+            </mat-menu> -->
+
+        </div>
+        <div class="col-3">
+            <img src="../../../assets/img/logo.png" height="80" width="200" style="cursor: pointer;"
+                (click)="goToHome()" />
+        </div>
+        <div class="col-3  align-self-center">
+            <div class="row">
+                <div class="col-3">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Crianças |
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                            <li><a class="dropdown-item" href="#">Menina | 6-14 Anos</a></li>
+                            <li><a class="dropdown-item" href="#">Menino | 6-14 Anos</a></li>
+                            <li><a class="dropdown-item" href="#">Bebé Menina | 3 Meses - 5 Anos</a></li>
+                            <li><a class="dropdown-item" href="#">Bebé Menino | 3 Meses - 5 Anos</a></li>
+                            <li><a class="dropdown-item" href="#">Mini | 0-12 Meses</a></li>                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Acessórios
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                            <li><a class="dropdown-item" href="#">Malas</a></li>
+                            <li><a class="dropdown-item" href="#">Pulseiras</a></li>
+                            <li><a class="dropdown-item" href="#">Anéis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <button mat-button class="menuCrianca" [matMenuTriggerFor]="menuCrianca"> Criança </button> |
+            <button mat-button class="menuAcessorios" [matMenuTriggerFor]="menuAcessorio"> Acessórios </button>
+            <mat-menu #menuCrianca="matMenu">
+                <button mat-menu-item>Menina | 6-14 Anos</button>
+                <button mat-menu-item>Menino | 6-14 Anos</button>
+                <button mat-menu-item>Bebé Menina | 3 Meses - 5 Anos</button>
+                <button mat-menu-item>Bebé Menino | 3 Meses - 5 Anos</button>
+                <button mat-menu-item>Mini | 0-12 Meses</button>
+            </mat-menu>
+            <mat-menu #menuAcessorio="matMenu">
+                <button mat-menu-item>Malas</button>
+                <button mat-menu-item>Pulseiras</button>
+                <button mat-menu-item>Anéis</button>
+            </mat-menu> -->
+        </div>
+        <div class="col-2 align-self-center">
+            <div>
+                <mat-icon class="icon-menu">
+                    app_registration
+                </mat-icon>
+                &nbsp;
+                <mat-icon class="icon-menu">
+                    login
+                </mat-icon>
+                &nbsp;
+                <mat-icon class="icon-menu">
+                    person
+                </mat-icon>
+                &nbsp;
+                <mat-icon class="icon-menu" (click)="goToWishList()">
+                    favorite
+                </mat-icon>
+                &nbsp;
+                <mat-icon class="icon-menu">
+                    logout
+                </mat-icon>
+
+            </div>
+        </div>
+    </div>
+</div>

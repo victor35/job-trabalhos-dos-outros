@@ -1,0 +1,50 @@
+.relative{
+    position: relative;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .content-slide{
+        position: absolute;
+        top:50%;
+        margin-left: 170px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 799px) {
+    .content-slide{
+        position: absolute;
+        top:50%;
+        margin-left: 350px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 993px) {
+    .content-slide{
+        position: absolute;
+        top:50%;
+        margin-left: 250px;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .content-slide{
+        position: absolute;
+        top:50%;
+        margin-left: 370px;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 2500px) {
+    .content-slide{
+        position: absolute;
+        top:50%;
+        margin-left: 550px;
+    }
+}
+
+.min-padding{
+    padding: 0  !important;
+}
+
+.img-fav:hover{
+    border: 2px solid rgb(221, 51, 51);
+}

@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <ngx-slick-carousel [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let slide of slides">
+                    <div class="relative">
+                        <img [src]="slide" style="height:400px!important; cursor: pointer;" width="100%">
+                    </div>
+                    <div class="content-slide">
+                        <label style="color: white; font-size: 50px;"><strong>SALDOS</strong></label>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="padding-top: 30px;">
+        <div class="col-12" style="text-align: center;">
+            <label style="color:black; font-size: 50px; text-align: center;"><strong>DESTAQUES</strong></label>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" style="padding-top: 30px;">
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-3 min-padding">
+            <img class="img-fav" src="../../../assets/img/cropped_straight_leg_chinos_2.jpg" style="width: 100%;" />
+        </div>
+    </div>
+</div>
+
+<div class="fixed-bottom" *ngIf="cookie" style="background-color: white;">
+    <div class="container">
+        <div class="row justify-content-center" style="margin: 20px;">
+            <div class="col-6" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit fermentum est, sed
+                efficitur
+                turpis tincidunt vitae. Ut feugiat neque vitae facilisis iaculis. Curabitur convallis ultrices
+                est
+                at elementum. Nunc et erat elementum mi porttitor imperdiet. Vestibulum in aliquet neque. Morbi
+                placerat ipsum tincidunt volutpat commodo. Sed sodales, metus sit amet condimentum gravida, nisl
+                ligula elementum leo, eget maximus diam purus id ligula. Suspendisse nec turpis ut lectus
+                convallis
+                facilisis ac sed ligula. Aenean id magna at purus vehicula blandit vitae ac erat. Etiam
+                imperdiet
+                gravida massa, ut scelerisque lectus porta ac. Curabitur nec lacus accumsan, consequat sapien
+                sed,
+                commodo enim.
+            </div>
+            <div class="col-3 align-self-center">
+                <button mat-raised-button style="background-color: black; 
+            color: white; border-radius: 5px;
+            text-align: center; border: none; width: 100%; height: 30px;" (click)="cookie = !cookie">ACEITAR TODOS OS
+                    COOKIES</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

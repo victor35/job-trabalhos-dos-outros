@@ -1,0 +1,170 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Gestão de produtos</h1>
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Produto: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <input type="text" class="input-text" />
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Marca: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <input type="text" class="input-text" />
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Tipo: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <select class="select-form">
+                <option class="option-form">
+                    -- Selecionar um tipo de produto
+                </option>
+                <option class="option-form">
+                    Calças
+                </option>
+                <option>
+                    Camisa
+                </option>
+                <option>
+                    Casaco
+                </option>
+            </select>
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Cor: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <input type="text" class="input-text" />
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Preço: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <input type="text" class="input-text" />
+        </div>
+
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Descrição: </p>
+        </div>
+        <div class="col-11 min-padding">
+            <textarea class="textarea-form"> </textarea>
+            <br />
+            <mat-slide-toggle>Destaque</mat-slide-toggle>
+        </div>
+        <div class="col-2 align-self-center min-padding" style="margin-top: 20px;">
+            <button mat-raised-button style="background-color: rgb(58, 58, 214); 
+                        color: white; border-radius: 5px;
+                        text-align: center; border: none; width: 100%; height: 30px;">Inserir Produto</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-top: 30px;">
+        <div class="col-1 align-self-center min-padding">
+            <p class="label-form">Pesquisar: </p>
+        </div>
+        <div class="col-7 min-padding">
+            <input type="text" class="input-text" />
+        </div>
+        <div class="col-2 ">
+            <button mat-raised-button style="background-color: rgb(58, 58, 214); 
+                        color: white; border-radius: 5px;
+                        text-align: center; border: none; width: 100%; height: 40px;">Pesquisa</button>
+        </div>
+        <div class="col-2">
+            <button mat-raised-button style="background-color: rgb(58, 58, 214); 
+                        color: white; border-radius: 5px;
+                        text-align: center; border: none; width: 100%; height: 40px;">Limpar Pesquisa</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h1>Lista de produtos</h1>
+            <p>Total de resultados: 4</p>
+        </div>
+        <div class="col-12">
+            <table mat-table [dataSource]="dataSource" class="mat-table-form">
+
+                <ng-container matColumnDef="foto">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Foto </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        <img src="../../../assets/img/{{element.foto_principal}}" style="height: 100px;" />
+                    </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="marca">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Marca </th>
+                    <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="produto">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Produto </th>
+                    <td mat-cell *matCellDef="let element"> Prod{{element.nome}}uto </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="tipo">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Tipo produto </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tipo_de_produto}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="cor">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Cor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.cor}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="preco">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Preço </th>
+                    <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="descricao">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Descrição </th>
+                    <td mat-cell *matCellDef="let element"> {{element.descricao}}  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="destaque">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Destaque </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div style="margin: 10px;">
+                            <mat-icon>
+                                check
+                            </mat-icon>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="operacoes">
+                    <th class="header-label" mat-header-cell *matHeaderCellDef> Operações </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div style="margin: 10px;">
+                            <mat-icon>
+                                close
+                            </mat-icon>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr class="header-table" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>
