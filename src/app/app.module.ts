@@ -19,6 +19,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { CookieService } from 'ngx-cookie-service';
 import {RouterModule} from '@angular/router';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {RouterModule} from '@angular/router';
     MatTableModule,
     RouterModule
   ],
-  providers: [CookieService],
+  providers: [CookieService,
+  {provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
